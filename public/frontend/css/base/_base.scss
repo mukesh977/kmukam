@@ -1,0 +1,91 @@
+body {
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #fcfcfc;
+  .form-control {
+    &:focus {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-color: #ccc;
+    }
+  }
+  textarea {
+    border-color: #ccc;
+    &:focus {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      border-color: #ccc;
+      outline: none;
+    }
+  }
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: #1c81c5;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  p {
+    text-align: justify;
+    line-height: 31px;
+    color: black;
+    font-size: 18px;
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+  button {
+    &:focus {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      outline: none;
+    }
+    &:active {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  input .btn {
+    &:focus {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  img {
+    width: 100%;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  &:focus {
+    outline: none;
+  }
+}
+.no-pad {
+  padding: 0;
+}
+.sec-padding {
+  padding: 50px 40px;
+}
+.sec-background {
+  background-color: white;
+}

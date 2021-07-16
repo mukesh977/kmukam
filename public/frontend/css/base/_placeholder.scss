@@ -1,0 +1,27 @@
+%display-bg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+%sec-title {
+	border-bottom: 2px solid #eee;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 20px;
+	span {
+		font-size: 16px;
+		color: #fff;
+		font-weight: 700;
+		float: left;
+		text-transform: uppercase;
+		margin-bottom: 0px;
+		background-color: #15540b;
+		border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+		padding: 11px 20px;
+		position: relative;
+		bottom: -2px;
+	}
+}
