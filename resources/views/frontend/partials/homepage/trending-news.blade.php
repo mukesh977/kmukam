@@ -29,9 +29,10 @@
 </section>
 
 <!-- BIGRYAPAN -->
-@foreach ($ads as $ad)
-
-    @if ($ad->slug == 'below-trending')
+<?php
+$below_trending_ads = $ads->where('slug', 'below-trending');
+?>
+@foreach ($below_trending_ads as $ad)
         <div class="main-bigyapan">
             <div class="container-fluid">
                 <div class="row">
@@ -73,7 +74,4 @@
                 </div>
             </div>
         </div>
-        
-        <?php break; ?>
-    @endif
 @endforeach

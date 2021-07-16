@@ -391,19 +391,16 @@
                         </div>
                         @endif
 
-                        @foreach ($ads as $ad)
-                        @if ($ad->slug == 'below-description')
+                        <?php
+                            $when_news_end_ads  = $ads->where('slug', 'when-news-end');
+                        ?>
+                        @foreach ($when_news_end_ads as $ad)
                         @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
 
                         <div class="main-long-advert mt-30">
                             <a href="{{ $ad->link }}" target="_blank"><img
                                     src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
                         </div>
-
-                        @endif
-
-                        <?php break; ?>
-
                         @endif
                         @endforeach
 
@@ -476,6 +473,20 @@
                                 </div>
                             </div>
                         </div>
+                        <?php
+                            $below_emoji_ads = $ads->where('slug', 'below-emoji');                            
+                        ?>
+                        @foreach ($below_emoji_ads as $ad)
+                        @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
+
+                        <div class="main-long-advert mt-30">
+                            <a href="{{ $ad->link }}" target="_blank"><img
+                                    src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
+                        </div>
+
+                        @endif
+                        @endforeach
+
                         <div class="ins-comments">
                             <div class="fb-comments" data-href="{{ Request::url() }}" data-width="100%"
                                 data-numposts="10"></div>
@@ -501,53 +512,17 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="main-right-advert">
+                        <?php
+                        $above_latest_ads = $ads->where('slug', 'above-latest-update');  
+                        ?>
+                        @foreach ($above_latest_ads as $ad)
+                                @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
 
-                        @foreach ($ads as $ad)
-                        @if ($ad->slug == 'above-latest-update-(1st)')
-                        @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
-
-                        <div class="main-right-advert-single">
-                            <a href="{{ $ad->link }}" target="_blank"><img
-                                    src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
-                        </div>
-
-                        @endif
-
-                        <?php break; ?>
-
-                        @endif
-                        @endforeach
-
-                        @foreach ($ads as $ad)
-                        @if ($ad->slug == 'above-latest-update-(2nd)')
-                        @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
-
-                        <div class="main-right-advert-single">
-                            <a href="{{ $ad->link }}" target="_blank"><img
-                                    src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
-                        </div>
-
-                        @endif
-
-                        <?php break; ?>
-
-                        @endif
-                        @endforeach
-
-                        @foreach ($ads as $ad)
-                        @if ($ad->slug == 'above-latest-update-(3rd)')
-                        @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
-
-                        <div class="main-right-advert-single">
-                            <a href="{{ $ad->link }}" target="_blank"><img
-                                    src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
-                        </div>
-
-                        @endif
-
-                        <?php break; ?>
-
-                        @endif
+                                    <div class="main-right-advert-single">
+                                        <a href="{{ $ad->link }}" target="_blank"><img
+                                                src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
+                                    </div>
+                                @endif
                         @endforeach
 
                     </div>
@@ -570,20 +545,16 @@
                     </div>
 
                     <div class="main-right-advert">
-
-                        @foreach ($ads as $ad)
-                        @if ($ad->slug == 'below-latest-update')
+                        <?php
+                        $below_latest_update_ads = $ads->where('slug', 'below-latest-update');  
+                        ?>
+                        @foreach ($below_latest_update_ads as $ad)
                         @if (($ad->status == 1) && validateSingleDate($today, $ad->publish_date, $ad->end_date))
 
                         <div class="main-right-advert-single">
                             <a href="{{ $ad->link }}" target="_blank"><img
                                     src="{{ asset('images/advertisement/'. $ad->image) }}" alt=""></a>
                         </div>
-
-                        @endif
-
-                        <?php break; ?>
-
                         @endif
                         @endforeach
                     </div>

@@ -3,6 +3,17 @@
 <header>
   <div class="header-top">
     <div class="container-fluid">
+      @if (isset($above_logo_ad))
+        @if (($above_logo_ad->status == 1) && validateSingleDate($today, $above_logo_ad->publish_date, $above_logo_ad->end_date))
+
+        <div class="main-long-advert">
+            <a href="{{ $above_logo_ad->link }}" target="_blank"><img
+                    src="{{ asset('images/advertisement/'. $above_logo_ad->image) }}" alt=""></a>
+        </div>
+
+        @endif
+      @endif
+
       <div class="header-top-logo">
         <a href="{{ route('frontend.home') }}"><img src="{{ asset('frontend/images/logo.png') }}" alt=""></a>
       </div>
