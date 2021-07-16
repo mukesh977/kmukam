@@ -1,0 +1,31 @@
+.mr-5{ margin-right: 5px !important; }
+.mb-10{ margin-bottom: 10px; }
+.mb-30{ margin-bottom: 30px; }
+.mb-15{ margin-bottom: 15px; }
+
+/* for images of media library model */
+.modal .modal-body img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  cursor: pointer;
+  object-fit: contain;
+  border: 2px solid transparent;
+}
+
+.gallery-image-item.active {
+  border: 2px solid #ed1c24 !important;
+}
+
+.mobile-gallery-image-item.active {
+  border: 2px solid #ed1c24 !important;
+}
+/* ends */
+
+.gallery-image-item2.active {
+  border: 2px solid #ed1c24 !important;
+}
+
+.mobile-gallery-image-item2 .active {
+  border: 2px solid #ed1c24 !important;
+}
